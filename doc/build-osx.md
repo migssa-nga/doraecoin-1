@@ -38,17 +38,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Build Litecoin Core
+Build Doraecoin Core
 ------------------------
 
-1. Clone the Litecoin Core source code and cd into `litecoin`
+1. Clone the Doraecoin Core source code and cd into `doraecoin`
 
-        git clone https://github.com/litecoin-project/litecoin
-        cd litecoin
+        git clone https://github.com/doraecoin-project/doraecoin
+        cd doraecoin
 
-2.  Build Litecoin Core:
+2.  Build Doraecoin Core:
 
-    Configure and build the headless Litecoin Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Doraecoin Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -70,33 +70,33 @@ Build Litecoin Core
 
     or
 
-        cd ~/litecoin/src
-        cp litecoind /usr/local/bin/
-        cp litecoin-cli /usr/local/bin/
+        cd ~/doraecoin/src
+        cp doraecoind /usr/local/bin/
+        cp doraecoin-cli /usr/local/bin/
 
 Running
 -------
 
-Litecoin Core is now available at `./src/litecoind`
+Doraecoin Core is now available at `./src/doraecoind`
 
 Before running, it's recommended that you create an RPC configuration file.
 
-    echo -e "rpcuser=litecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
+    echo -e "rpcuser=doraecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Doraecoin/doraecoin.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Doraecoin/doraecoin.conf"
 
-The first time you run litecoind, it will start downloading the blockchain. This process could take several hours.
+The first time you run doraecoind, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/Litecoin/debug.log
+    tail -f $HOME/Library/Application\ Support/Doraecoin/debug.log
 
 Other commands:
 -------
 
-    ./src/litecoind -daemon # Starts the litecoin daemon.
-    ./src/litecoin-cli --help # Outputs a list of command-line options.
-    ./src/litecoin-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/doraecoind -daemon # Starts the doraecoin daemon.
+    ./src/doraecoin-cli --help # Outputs a list of command-line options.
+    ./src/doraecoin-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Notes
 -----
